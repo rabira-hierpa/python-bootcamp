@@ -20,20 +20,22 @@ else:
     print("Enter Player 2 choice: ")
     player2 = input()
 
-    if player1 and player2:
-        if (player1 == __rock__ and player2 == __paper__):
-            print("Player 2 wins")
-        elif (player2 == __rock__ and player1 == __paper__):
-            print("Player 1 wins")
-        elif (player1 == __rock__ and player2 == __scissors__):
-            print("Player 1 wins")
-        elif (player2 == __rock__ and player1 == __scissors__):
-            print("Player 2 wins")
-        elif (player1 == __paper__ and player2 == __scissors__):
+    if player1 == player2
+        print("It's a draw")
+    elif player1 == __rock__:
+        if player2 == __scissors__:
+            print("Player 1 Wins")
+        elif player2 == __paper__:
             print("Player 2 Wins")
-        elif(player1 == __scissors__ and player2 == __paper__):
-            print("Player 2 wins")
-        elif player1 == player2:
-            print("DRAW!!!")
+    elif player1 == __paper__:
+        if player2 == __rock__:
+            print("Player 1 Wins")
+        elif player2 == __scissors__:
+            print("Player 2 Wins")
+    elif player1 == __scissors__:
+        if player2 == __paper__:
+            print("Player 1 Wins")
+        elif player2 == __rock__:
+            print("Player 2 Wins")
     else:
         print("Please enter a valid input(rock,paper or scissors)")
