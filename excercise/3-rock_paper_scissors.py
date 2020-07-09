@@ -1,4 +1,4 @@
-import random
+from random import randint
 
 print("Welcome to the game!")
 print("ROCK PAPER SCISSORS")
@@ -15,14 +15,14 @@ game_mode = int(game_mode)
 if game_mode == 1:
     #play with the computer
     computer = None
-    rand_num = random.randint(0, 2)
+    rand_num = randint(0, 2)
     if rand_num == 0:
         computer = __rock__
     elif rand_num == 1:
         computer = __paper__
     else:
         computer == __scissors__
-    player = input("Enter your move: ")
+    player = input("Enter your move: ").lower()
     print("Computer move was " + computer)
     print("Your move was " + player)
     if player == computer:
@@ -50,10 +50,10 @@ elif game_mode == 2:
     #play with each other
     start = input("Press any key to start the game")
     print("Enter Player 1 choice: ")
-    player1 = input()
+    player1 = input().lower()
     print("** NO CHEATING** \n " * 50)
     print("Enter Player 2 choice: ")
-    player2 = input()
+    player2 = input().lower()
 
     if player1 == player2:
         print("It's a draw")
