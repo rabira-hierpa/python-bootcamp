@@ -1,27 +1,22 @@
 import random
 
 random_number = random.randint(1,10)  # numbers 1 - 10
-game_over = False
-game_menu = "Guess a number between 1 and 10"
-user_guess = input(game_menu)
-while game_over is False:
-    if int(user_guess) == random_number:
-        print("You guessed it. You won!")
-        replay = input("Do you want to play again? (y/n)")
-        if replay == "y":
-            game_over = False
+user_guess = None
+while True:
+    game_menu = input("Guess a number between 1 and 10 ")
+    user_guess = int(game_menu)
+    if user_guess:
+        if int(user_guess) == random_number:
+            print("You guessed it. You won!")
+            replay = input("Do you want to play again? (y/n)")
+            if replay == "y":
+                user_guess = None
+            else:
+                print("Thanks for playing. Bye!")
+                break  
+        elif int(user_guess) > random_number:
+            print("Too high, try again!")
         else:
-            print("Thanks for playing. Bye!")
-            game_over = True    
-    elif int(user_guess) > random_number:
-        print("Too high, try again!")
-        user_guess =input(game_menu)
+            print("Too low, try again!")
     else:
-        print("Too low, try again!")
-        user_guess = input(game_menu)
-    
-# handle user guesses
-#   if they guess correct, tell them they won
-#     otherwise tell them if they are too high or too low
-
-# BONUS - let player play again if they want!
+        print("Please enter a valid value!!! ")
