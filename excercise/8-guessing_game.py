@@ -9,7 +9,7 @@ while True:
         if int(user_guess) == random_number:
             print("You guessed it. You won!")
             replay = input("Do you want to play again? (y/n)")
-            if replay == "y":
+            if replay.lower() == "y":
                 user_guess = None
             else:
                 print("Thanks for playing. Bye!")
