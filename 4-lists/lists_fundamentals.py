@@ -75,4 +75,18 @@ items.pop() # removes "trainers"
 last_item = items.pop(4) # removes "pants"
 print(items)
 print("Last item is " + last_item)
+first_item = items.pop(0)
+print(items)
+print(first_item)
+# remove method of a list
+names = ["bitu","deju","edu","mistere","saron","mesale","mekdi","Nazrawian"]
+names.append("abi")
+print(names)
+names.remove("Nazrawian")
+print(names)
+names.insert(4,"Naz")
+print(names)
+names.append("Naz")
+print(names)
+names.remove("Naz") # removes the 4th index naz not the last one!
 
