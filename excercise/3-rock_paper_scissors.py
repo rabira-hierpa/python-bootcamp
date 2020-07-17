@@ -92,7 +92,7 @@ while True:
                 print("Player 2 Wins")
         else:
             print("Please enter a valid input(rock,paper or scissors)")
-    # quite the
+    # quite the game
     elif game_mode == "3":
         print("Quitting game...")
         break
