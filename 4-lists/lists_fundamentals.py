@@ -89,4 +89,29 @@ print(names)
 names.append("Naz")
 print(names)
 names.remove("Naz") # removes the 4th index naz not the last one!
+# index method
+names.index('bitu')  # prints 0
+names.append("Naz")
+names.insert(6,"Naz")
+# ['bitu', 'deju', 'edu', 'mistere', 'saron', 'mesale', 'mekdi', 'Nazrawian']
+print(names)
+names.index("Naz")  # prints 6 since it is the first occurance
+names.index("Naz", 7)  # prints 9 because the start position is the 7th index
+names.index("Naz",0,6) # error Naz is not is the list becuase start and end index values are not inclusive
+# coutn mehtod
+names.count("Naz") # prints 2
+# reverse method
+names.reverse() 
+print(names) # reversed list
+# sort
+names.sort()
+print(names)
+names.append("Abi")
+names.extend(("Yoni", "abeni", "semera")) # note that you must surround your items to supply to the methoda as a single argument
+print(names)
+names.sort()
+print(names)
+firends = ", ".join(names)
+print("Naz family includes " + firends)
+
 
